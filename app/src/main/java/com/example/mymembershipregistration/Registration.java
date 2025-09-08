@@ -1,6 +1,8 @@
 package com.example.mymembershipregistration;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Registration extends AppCompatActivity {
+
+    EditText firstNameEt, lastNameEt,
+             emailAddressEt, BirthdayEt,
+             usernameEt, passwordEt;
+    Button registerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,4 +28,6 @@ public class Registration extends AppCompatActivity {
             return insets;
         });
     }
+
+
 }
