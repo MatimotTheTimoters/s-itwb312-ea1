@@ -39,6 +39,13 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     }
 
     public void registerBtnOnClick(View v) {
+        getEditTextId(firstNameEt, R.id.firstNameEt);
+        getEditTextId(lastNameEt, R.id.lastNameEt);
+        getEditTextId(emailAddressEt, R.id.emailAddressEt);
+        getEditTextId(birthdayEt, R.id.birthdayEt);
+        getEditTextId(usernameEt, R.id.usernameEt);
+        getEditTextId(passwordEt, R.id.passwordEt);
+
         exportEditTextValues();
     }
 
