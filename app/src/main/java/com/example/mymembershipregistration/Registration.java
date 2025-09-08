@@ -34,4 +34,9 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
     }
+
+    public void getEditTextId(EditText et, int id) {
+        et = findViewById(id);
+        et.setOnClickListener(this);
+    }
 }
