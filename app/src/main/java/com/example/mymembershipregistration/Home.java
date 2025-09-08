@@ -2,6 +2,7 @@ package com.example.mymembershipregistration;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
 
-    TextView usernameTv;
+    TextView usernameTvValue;
     String username;
 
     @Override
@@ -25,10 +26,22 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        getTextViewId(usernameTvValue, R.id.usernameTvValue);
+
+        Bundle bundle = getIntent().getExtras();
+        username = bundle.getString("username");
+
+        usernameTvValue.setText(username);
     }
 
     @Override
     public void onClick(View v) {
 
+    }
+
+    public void getTextViewId(TextView et, int id) {
+        et = findViewById(id);
+        et.setOnClickListener(this);
     }
 }
