@@ -1,6 +1,7 @@
 package com.example.mymembershipregistration;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -10,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity implements View.OnClickListener {
 
     EditText firstNameEt, lastNameEt,
              emailAddressEt, BirthdayEt,
@@ -29,5 +30,8 @@ public class Registration extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onClick(View v) {
 
+    }
 }
