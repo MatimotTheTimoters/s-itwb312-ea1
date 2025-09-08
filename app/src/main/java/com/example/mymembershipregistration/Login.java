@@ -1,7 +1,9 @@
 package com.example.mymembershipregistration;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +18,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     String firstName, lastName,
            emailAddress, birthday,
            username, password;
+    Button loginBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +30,35 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        loginBtn = findViewById(R.id.loginBtn);
     }
 
     @Override
     public void onClick(View v) {
 
+    }
+
+    public void loginBtnOnClick(View v) {
+        getEditTextId(usernameEt, R.id.usernameEt);
+        getEditTextId(passwordEt, R.id.passwordEt);
+
+        exportEditTextValues();
+    }
+
+    public void exportEditTextValues() {
+        Login login = new Login();
+        Intent exportIntent = new Intent(Login.this, Home.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("username", usernameEt.getText().toString());
+        bundle.putString("password", passwordEt.getText().toString());
+        exportIntent.putExtras(bundle);
+        startActivity(exportIntent);
+        finish();
+    }
+
+    public void getEditTextId(EditText et, int id) {
+        et = findViewById(id);
+        et.setOnClickListener(this);
     }
 }
