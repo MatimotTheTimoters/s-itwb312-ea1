@@ -23,7 +23,7 @@
                 android:id="@+id/firstNameTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="First Name" />
 
             <EditText
                 android:id="@+id/firstNameEt"
@@ -44,7 +44,7 @@
                 android:id="@+id/lastNameTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Last Name" />
 
             <EditText
                 android:id="@+id/lastNameEt"
@@ -65,7 +65,7 @@
                 android:id="@+id/emailAddressTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Email Address" />
 
             <EditText
                 android:id="@+id/emailAddressEt"
@@ -86,7 +86,7 @@
                 android:id="@+id/birthdayTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Birthday" />
 
             <EditText
                 android:id="@+id/birthdayEt"
@@ -103,6 +103,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/usernameEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="" />
         </LinearLayout>
 
         <!--Password-->
@@ -111,6 +124,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/passwordTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="" />
         </LinearLayout>
     </LinearLayout>
 
