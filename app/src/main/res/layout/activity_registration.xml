@@ -40,6 +40,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/lastNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <EditText
+                android:id="@+id/lastNameEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name" />
         </LinearLayout>
 
         <!--Email Address-->
