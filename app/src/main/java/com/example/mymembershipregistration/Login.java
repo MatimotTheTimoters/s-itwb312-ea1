@@ -39,6 +39,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         username = bundle.getString("username");
         password = bundle.getString("password");
 
+        getEditTextId(usernameEt, R.id.usernameEt);
+        getEditTextId(passwordEt, R.id.passwordEt);
         loginBtn = findViewById(R.id.loginBtn);
     }
 
@@ -48,9 +50,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void loginBtnOnClick(View v) {
-        getEditTextId(usernameEt, R.id.usernameEt);
-        getEditTextId(passwordEt, R.id.passwordEt);
-
         exportEditTextValues();
     }
 
