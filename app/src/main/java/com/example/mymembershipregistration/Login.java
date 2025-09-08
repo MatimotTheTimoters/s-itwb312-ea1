@@ -59,7 +59,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         Intent exportIntent = new Intent(Login.this, Home.class);
         Bundle bundle = new Bundle();
         bundle.putString("username", usernameEt.getText().toString());
-        bundle.putString("password", passwordEt.getText().toString());
         exportIntent.putExtras(bundle);
         startActivity(exportIntent);
         finish();
