@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="30dp">
 
         <!--First Name-->
         <LinearLayout
@@ -146,16 +147,11 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/submitBtn"
+                android:id="@+id/registerBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit" />
-
-            <Button
-                android:id="@+id/clearBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Clear" />
+                android:text="Register"
+                android:layout_margin="10dp"/>
         </LinearLayout>
     </LinearLayout>
 
