@@ -46,12 +46,12 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         Login login = new Login();
         Intent exportIntent = new Intent(Registration.this, Login.class);
         Bundle bundle = new Bundle();
-        bundle.putString("firstNameEt", firstNameEt.getText().toString());
-        bundle.putString("lastNameEt", lastNameEt.getText().toString());
-        bundle.putString("emailAddressEt", emailAddressEt.getText().toString());
-        bundle.putString("birthdayEt", birthdayEt.getText().toString());
-        bundle.putString("usernameEt", usernameEt.getText().toString());
-        bundle.putString("passwordEt", passwordEt.getText().toString());
+        bundle.putString("firstName", firstNameEt.getText().toString());
+        bundle.putString("lastName", lastNameEt.getText().toString());
+        bundle.putString("emailAddress", emailAddressEt.getText().toString());
+        bundle.putString("birthday", birthdayEt.getText().toString());
+        bundle.putString("username", usernameEt.getText().toString());
+        bundle.putString("password", passwordEt.getText().toString());
         exportIntent.putExtras(bundle);
         startActivity(exportIntent);
         finish();

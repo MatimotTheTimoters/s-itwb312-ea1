@@ -1,6 +1,7 @@
 package com.example.mymembershipregistration;
 
 import android.os.Bundle;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Login extends AppCompatActivity {
+
+    EditText usernameEt, passwordEt;
+    String firstName, lastName,
+           emailAddress, birthday,
+           username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
