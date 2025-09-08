@@ -31,6 +31,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             return insets;
         });
 
+        Bundle bundle = getIntent().getExtras();
+        firstName = bundle.getString("firstName");
+        lastName = bundle.getString("lastName");
+        emailAddress = bundle.getString("emailAddress");
+        birthday = bundle.getString("birthday");
+        username = bundle.getString("username");
+        password = bundle.getString("password");
+
         loginBtn = findViewById(R.id.loginBtn);
     }
 
