@@ -2,8 +2,8 @@ package com.example.mymembershipregistration;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,25 +14,39 @@ import androidx.core.view.WindowInsetsCompat;
 public class Home extends AppCompatActivity implements View.OnClickListener {
 
     TextView usernameTvValue;
-    String username;
+    String username = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        getTextViewId(usernameTvValue, R.id.usernameTvValue);
+        usernameTvValue = bindTextView(R.id.usernameTvValue);
 
-        Bundle bundle = getIntent().getExtras();
-        username = bundle.getString("username");
+        if (getIntent() != null) {
+            String incoming = getIntent().getStringExtra("username");
+            if (incoming != null) {
+                username = incoming;
+            } else {
+                Bundle bundle = getIntent().getExtras();
+                if (bundle != null) {
+                    username = bundle.getString("username", "");
+                }
+            }
+        }
 
-        usernameTvValue.setText(username);
+        if (usernameTvValue != null) {
+            usernameTvValue.setText(username.isEmpty() ? "Guest" : username);
+        } else {
+            Toast.makeText(this, "UI error: username view not found", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -40,8 +54,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    public void getTextViewId(TextView et, int id) {
-        et = findViewById(id);
-        et.setOnClickListener(this);
+    private TextView bindTextView(int id) {
+        TextView tv = findViewById(id);
+        return tv;
     }
 }
